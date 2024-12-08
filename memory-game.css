@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0px;
+  margin: 0px;
+}
+
+.game-structure {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  padding: 20px 10px 30px 10px;
+  margin: 0px;
+  border-radius: 25px;
+  row-gap: 15px;
+  background-color: rgb(215, 219, 223);
+  justify-content: center;
+  align-items: center;
+}
+
+.general-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+.game-title-note {
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+.welcome-note {
+  color: #0e9d57;
+  padding: 0px;
+  margin: 0px;
+}
+
+.cards {
+  display: grid;
+  grid-template-rows: 125px 125px 125px;
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-gap: 20px 10px;
+  place-items: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+.card {
+  justify-items: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px;
+}
+
+.card-backside {
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  height: 125px;
+  width: 125px;
+  background-color: #0e9d57;
+  padding: 0px;
+  margin: 0px;
+}
+
+.card-image {
+  height: 125px;
+  width: 125px;
+  border-radius: 10px;
+  padding: 0px;
+  margin: 0px;
+  transform: rotateY(90deg);
+  transition: all ease-in 0.25s;
+}
+
+.move-counter {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+}
+
+.restart-button {
+  padding: 10px 20px;
+  background-color: #0e9d57;
+  border: 1px solid rgb(215, 219, 223);
+  border-radius: 25px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.restart-button:hover {
+  background-color: bisque;
+  border: 1px solid #0e9d57;
+  color: #0e9d57;
+}
+
+/* Style for after card clicked */
+.flipped .card-image {
+  transform: rotateY(0deg);
+  transition-delay: 0.25s;
+}
+
+.flipped .card-backside {
+  transform: rotateY(90deg);
+  transition-delay: 0s;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 767px) {
+  .game-structure {
+    width: 100%;
+  }
+
+  .cards {
+    grid-template-rows: 125px 125px 125px 125px;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 10px 10px;
+  }
+
+  .card-backside {
+    height: 100px;
+    width: 100px;
+  }
+
+  .card-image {
+    height: 100px;
+    width: 100px;
+  }
+
+  .general-content {
+    padding: 10px 0px 0px 0px;
+  }
+}
